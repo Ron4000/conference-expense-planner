@@ -32,6 +32,15 @@ npm run dev
 
 Create a production build with `npm run build`.
 
+## Deploy to GitHub Pages
+
+The Vite base path and deployment workflow are configured for the
+`conference-expense-planner` repository. Push to the `main` branch, then in
+GitHub open **Settings → Pages → Build and deployment** and choose **GitHub
+Actions** as the source. GitHub Actions will build the app and publish `dist`.
+Client-side navigation uses URL hashes so refreshing the planner works on
+GitHub Pages.
+
 ## Project structure
 
 ```text
