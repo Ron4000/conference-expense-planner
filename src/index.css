@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --color-navy: #103b65;
+  --color-navy-deep: #071a2c;
+  --color-blue: #1f6b91;
+  --color-blue-soft: #e8f3f6;
+  --color-teal: #208b91;
+  --color-teal-dark: #176f78;
+  --color-gold: #e8b448;
+  --color-gold-light: #f4d17e;
+  --color-white: #ffffff;
+  --color-background: #f2f6f7;
+  --color-surface: #f5f8f9;
+  --color-surface-deep: #e5eef0;
+  --color-panel: rgb(255 255 255 / 70%);
+  --color-panel-border: rgb(255 255 255 / 80%);
+  --color-border: #e3e9ec;
+  --color-border-strong: #cbd7dc;
+  --color-text: #263d4f;
+  --color-muted: #71818c;
+  --color-landing-overlay-strong: rgb(7 22 39 / 89%);
+  --color-landing-overlay-mid: rgb(10 34 57 / 76%);
+  --color-landing-overlay-light: rgb(9 28 47 / 50%);
+  --color-landing-overlay-bottom: rgb(8 25 43 / 50%);
+  --color-white-78: rgb(255 255 255 / 78%);
+  --color-white-82: rgb(255 255 255 / 82%);
+  --color-white-62: rgb(255 255 255 / 62%);
+  --color-white-35: rgb(255 255 255 / 35%);
+  --color-haze: rgb(212 232 234 / 78%);
+  --color-haze-light: rgb(231 237 244 / 90%);
+  --color-overlay: rgb(7 22 39 / 72%);
+  --color-gold-shadow: rgb(232 180 72 / 22%);
+
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --font-display: 'Manrope', 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-hero: clamp(3rem, 7vw, 6.4rem);
+  --font-size-section: clamp(1.7rem, 3vw, 2.4rem);
+  --font-size-planner-title: clamp(2.5rem, 5vw, 4.3rem);
+  --font-size-modal-total: clamp(2.5rem, 7vw, 4.5rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-page: clamp(var(--space-6), 5vw, var(--space-12));
+  --space-section: clamp(var(--space-6), 4vw, var(--space-10));
+  --space-landing: clamp(var(--space-6), 5vw, var(--space-12));
+  --nav-height: 4.5rem;
+  --content-width: 80rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1.25rem;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 0.4rem 1.5rem rgb(18 52 73 / 7%);
+  --shadow-hover: 0 1rem 2rem rgb(18 52 73 / 13%);
+  --shadow-panel: 0 1.25rem 3.5rem rgb(18 52 73 / 7%);
+  --shadow-nav: 0 0.3rem 1.2rem rgb(4 24 43 / 15%);
+  --shadow-modal: 0 2rem 6rem rgb(3 18 31 / 34%);
+
+  --transition-fast: 160ms ease;
+  --transition-normal: 240ms ease;
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body,
+button,
+input {
+  font-family: var(--font-body);
+}
+
+button,
+input {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  color: var(--color-navy-deep);
+  background: var(--color-gold-light);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --nav-height: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

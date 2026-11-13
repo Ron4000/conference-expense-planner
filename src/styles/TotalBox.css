@@ -1,0 +1,26 @@
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  width: min(100%, 21rem);
+  margin: var(--space-7) 0 0 auto;
+  padding: var(--space-5) var(--space-6);
+  color: var(--color-white);
+  background: var(--color-navy);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.total-box strong {
+  font-size: var(--font-size-xl);
+  color: var(--color-gold-light);
+  transition: color var(--transition-fast);
+}
+
+@media (max-width: 38rem) {
+  .total-box {
+    width: 100%;
+  }
+}
